@@ -109,8 +109,17 @@ public class RegisterSteps {
 
     @Then("the user should see {string}")
     public void verifyResult(String expected) throws InterruptedException {
-        Thread.sleep(5000); // Gör att sidan visas innan den stängs
-        boolean found = driver.getPageSource().toLowerCase().contains(expected.toLowerCase());
+        Thread.sleep(5000); // Vänta på att sidan ska laddas
+        String pageSource = driver.getPageSource().toLowerCase();
+        boolean found = pageSource.contains(expected.toLowerCase());
+
+        // Extra information för felsökning
+        if (!found) {
+            System.out.println("\nFEL – Texten hittades inte:");
+            System.out.println("Förväntad: " + expected);
+            System.out.println("Sidan innehåller:\n" + pageSource);
+        }
+
         Assert.assertTrue("Expected message not found: " + expected, found);
         driver.quit();
     }
