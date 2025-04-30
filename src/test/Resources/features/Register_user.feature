@@ -19,7 +19,7 @@ Feature: Basketball England Registration
 
     Examples:
       | firstname | lastname | email                    | confirmemail           | password      | confirmpassword | dob        | terms | message                        |
-      | Peter    | Muneer    | petershafo9+A@gmail.com  | petershafo9+A@gmail.com| Peter200510 | Peter200510   | 20/12/2005 | true  | Thank you for creating an account with Basketball England     |
-      | Peter    |          | petershafo9@gmail.com  | petershafo9@gmail.com| Peter200510 | Peter200510   | 20/12/2005 | true  | Please enter your last name   |
-      | Peter    | Muneer    | petershafo9@gmail.com  | petershafo9@gmail.com| Peter200510 | wrongpass       | 20/12/2005 | true  | Passwords must match          |
-      | Peter    | Muneer    | petershafo9@gmail.com  | petershafo9@gmail.com| Peter200510 | Peter200510   | 20/12/2005 | false | You must accept the terms     |
+      | Peter    | Muneer    | GENERATED_EMAIL  | GENERATED_EMAIL| Peter200510 | Peter200510   | 20/12/2005 | true  | THANK YOU FOR CREATING AN ACCOUNT WITH BASKETBALL ENGLAND     |
+      | Peter    |          | petershafo9@gmail.com  | petershafo9@gmail.com| Peter200510 | Peter200510   | 20/12/2005 | true  | Last Name is required   |
+      | Peter    | Muneer    | petershafo9@gmail.com  | petershafo9@gmail.com| Peter200510 | wrongpass       | 20/12/2005 | true  | Password did not match          |
+      | Peter    | Muneer    | petershafo9@gmail.com  | petershafo9@gmail.com| Peter200510 | Peter200510   | 20/12/2005 | false | You must confirm that you have read and accepted our Terms and Conditions     |

@@ -15,6 +15,8 @@ public class RegisterSteps {
     WebDriver driver;
     WebDriverWait wait;
 
+    String generatedEmail = "petershafo9+" + System.currentTimeMillis() + "@gmail.com";
+
     @Given("the user is on the registration page")
     public void the_user_is_on_the_registration_page() {
         String browser = System.getProperty("browser", "chrome");
@@ -56,14 +58,14 @@ public class RegisterSteps {
     public void enterEmail(String email) {
         By locator = By.id("member_emailaddress");
         waitForElement(locator);
-        driver.findElement(locator).sendKeys(email);
+        driver.findElement(locator).sendKeys(generatedEmail);
     }
 
     @When("the user enters confirm email {string}")
     public void enterConfirmEmail(String confirmEmail) {
         By locator = By.id("member_confirmemailaddress");
         waitForElement(locator);
-        driver.findElement(locator).sendKeys(confirmEmail);
+        driver.findElement(locator).sendKeys(generatedEmail);
     }
 
     @When("the user enters password {string}")
