@@ -23,3 +23,4 @@ Feature: Basketball England Registration
       | Peter    |          | petershafo9@gmail.com  | petershafo9@gmail.com| Peter200510 | Peter200510   | 20/12/2005 | true  | Last Name is required   |
       | Peter    | Muneer    | petershafo9@gmail.com  | petershafo9@gmail.com| Peter200510 | wrongpass       | 20/12/2005 | true  | Password did not match          |
       | Peter    | Muneer    | petershafo9@gmail.com  | petershafo9@gmail.com| Peter200510 | Peter200510   | 20/12/2005 | false | You must confirm that you have read and accepted our Terms and Conditions     |
+
